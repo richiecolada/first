@@ -1,0 +1,101 @@
+{
+  "_from": "components@1.0.1",
+  "_id": "components@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-c2/2btvRHvIfQth6+zIKlanK8vs=",
+  "_location": "/components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "components@1.0.1",
+    "name": "components",
+    "escapedName": "components",
+    "rawSpec": "1.0.1",
+    "saveSpec": null,
+    "fetchSpec": "1.0.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifacts.pieinsurance.com/npm/npm/components/-/components-1.0.1.tgz",
+  "_shasum": "736ff66edbd11ef21f42d87afb320a95a9caf2fb",
+  "_spec": "components@1.0.1",
+  "_where": "/Users/richardwolf/Desktop/test",
+  "author": {
+    "name": "Rich Wolf",
+    "email": "rich@pieinsurance.com",
+    "url": "http://pieinsurance.com"
+  },
+  "bugs": {
+    "url": "https://github.com/richiecolada/Components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Shared NPM components for web UIs",
+  "devDependencies": {
+    "@types/node": "^10.1.2",
+    "@types/react": "^16.3.14",
+    "enzyme": "^3.3.0",
+    "jest": "^23.0.0",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0",
+    "stylelint": "latest",
+    "stylelint-config-standard": "latest",
+    "webpack": "^4.8.3"
+  },
+  "files": [
+    "es"
+  ],
+  "homepage": "https://github.com/richiecolada/Components#readme",
+  "keywords": [
+    "Shared",
+    "NPM",
+    "components",
+    "web",
+    "UI"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "module": "es/index.js",
+  "name": "components",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richiecolada/Components.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "pre-publish": "npm run test-all && node ./scripts/prepub",
+    "pub": "antd-tools run pub",
+    "restore": "npm i --no-optional --no-package-lock",
+    "start": "dotnet build && npm-run-all --parallel start-web start-worker start-policy start-marketing",
+    "start-web": "cd src/Server && dotnet watch run --no-build",
+    "test": "jest --config .jest.js",
+    "test-node": "jest --config .jest.node.js",
+    "webpackdevserver": "node scripts/start.js"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "color-no-invalid-hex": true,
+      "color-hex-length": "long",
+      "comment-empty-line-before": null,
+      "at-rule-no-unknown": null,
+      "selector-pseudo-element-colon-notation": "single",
+      "property-no-vendor-prefix": true,
+      "declaration-colon-newline-after": null
+    }
+  },
+  "typings": "typings/index.d.ts",
+  "version": "1.0.1"
+}
